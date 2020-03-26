@@ -1,0 +1,10 @@
+
+                Returns all total cases, recovery, and deaths.
+
+                Returns data of all countries that has COVID-19
+https://corona.lmao.ninja/countries?sort={parameter}
+                Returns data of each country sorted by the parameter
+
+                Returns data of a specific country. If an exact name match is desired pass ?strict=true in the query string
+
+                Returns all United States of America and their Corona data

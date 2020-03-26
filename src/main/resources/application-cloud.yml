@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: covid19-live
+server:
+  servlet:
+    context-path: /${spring.application.name}/api
+
+# Spring Actuator Configurations
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+      base-path: /manage
+  endpoint:
+    health:
+      show-details: always
+  cloudfoundry:
+    skip-ssl-validation: true
