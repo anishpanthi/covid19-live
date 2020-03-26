@@ -11,7 +11,7 @@ public interface Covid19CaseService {
      * Returns all total cases, recovery and deaths.
      * @return Single JSON String
      */
-    Covid19Case getAll();
+    Covid19Case getAllStatus();
 
     /**
      * Returns data of all countries that has COVID-19 cases

@@ -22,7 +22,7 @@ public class Covid19CaseServiceImpl implements Covid19CaseService {
      * @return Single JSON String
      */
     @Override
-    public Covid19Case getAll() {
+    public Covid19Case getAllStatus() {
         HttpHeaders requestHeaders = new HttpHeaders();
         HttpEntity<?> requestEntity = new HttpEntity<>(requestHeaders);
 

@@ -21,13 +21,13 @@ public class Covid19Controller {
     private final Covid19CaseService covid19CaseService;
 
     @ApiOperation(value = "Returns all total cases, recovery and deaths")
-    @GetMapping(value = "/all", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?> getAll() {
-        return new ResponseEntity<>(covid19CaseService.getAll(), HttpStatus.OK);
+    @GetMapping(value = "/status", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> getAllStatus() {
+        return new ResponseEntity<>(covid19CaseService.getAllStatus(), HttpStatus.OK);
     }
 
     @ApiOperation(value = "Returns data of all countries that has COVID-19 cases")
-    @GetMapping(value = "/countries", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/countries/all", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> getAllCountries() {
         return new ResponseEntity<>(covid19CaseService.getAllCountries(), HttpStatus.OK);
     }
@@ -35,12 +35,12 @@ public class Covid19Controller {
     @ApiOperation(value = "Returns data of a specific country")
     @GetMapping(value = "/countries/{countryName}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> getByCountryName(
-            @ApiParam(value = "Country Name for which COVID19 Status needs to be displayed", required = true) @PathVariable("countryName") String countryName) {
+            @ApiParam(value = "Country Name for which COVID-19 Status needs to be displayed", required = true) @PathVariable("countryName") String countryName) {
         return new ResponseEntity<>(covid19CaseService.getByCountryName(countryName), HttpStatus.OK);
     }
 
     @ApiOperation(value = "Returns all United States of America and their Corona data by States")
-    @GetMapping(value = "/all/us/states", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/us/states/all", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> getAllUsStatesCases() {
         return new ResponseEntity<>(covid19CaseService.getAllUsStatesCases(), HttpStatus.OK);
     }
