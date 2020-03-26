@@ -3,8 +3,6 @@ applications:
   - name: covid19-live
     memory: 2G
     instances: 1
-    routes:
-      - route: http://covid19-live.apps.pcfsb.hms.hmsy.com
     path: ./build/libs/covid19-live-1.0.jar
     services:
     env:
