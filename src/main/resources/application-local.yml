@@ -18,3 +18,13 @@ management:
       show-details: always
   cloudfoundry:
     skip-ssl-validation: true
+
+com:
+  swagger:
+    api:
+      title: ${spring.application.name}
+      description: Provides LIVE COVID19 Status
+      terms-of-service-url:
+      version: 1.0
+      controller:
+        base-package: com.app.hms.covid19live
